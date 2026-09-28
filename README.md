@@ -9,7 +9,7 @@ port-logistics platform to Danantara Indonesia.
 |---|---|
 | `FKS_Danantara_Platform_Deck_2026-09-28_v1.pptx` | The deck. Fully editable: native text boxes, shapes, lines, one native chart, editable freeform maps. Only the site photographs and the logo lockup are images. |
 | `build/render/deck-01.png` … `deck-09.png` | Rendered slide images from the QA pass (LibreOffice, 110 dpi). |
-| `build/research/*.txt` | Research notes with sources, classified FACT / DERIVED / PROXY / UNVERIFIED. |
+| `build/research/*.txt` | Research notes with sources (FACT / DERIVED / PROXY / UNVERIFIED) and the six-agent review findings (`review_*.txt`). |
 
 Version history: this is the first version stored in this repository. No earlier deck file existed
 in the repository when it was created, so the deck was built from scratch to the agreed storyline.

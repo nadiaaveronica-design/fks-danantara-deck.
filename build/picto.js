@@ -9,14 +9,16 @@ function ship(slide, x, y, w, h, color = C.navy, opt = {}) {
   const f = fillOpt(color);
   // hull (wide at deck, narrow at keel)
   slide.addShape('trapezoid', Object.assign({ x, y: y + h * 0.58, w, h: h * 0.42, flipV: true }, f));
-  // deck house + bridge (aft = right)
-  slide.addShape('rect', Object.assign({ x: x + w * 0.74, y: y + h * 0.28, w: w * 0.16, h: h * 0.32 }, f));
-  slide.addShape('rect', Object.assign({ x: x + w * 0.77, y: y + h * 0.1, w: w * 0.1, h: h * 0.2 }, f));
+  // deck house + bridge (aft = right by default; aftLeft mirrors it)
+  const hx = opt.aftLeft ? x + w * 0.1 : x + w * 0.74;
+  slide.addShape('rect', Object.assign({ x: hx, y: y + h * 0.28, w: w * 0.16, h: h * 0.32 }, f));
+  slide.addShape('rect', Object.assign({ x: hx + w * 0.03, y: y + h * 0.1, w: w * 0.1, h: h * 0.2 }, f));
   // hatch covers
   const n = opt.hatches || 4;
   const hw = (w * 0.62) / n;
+  const h0 = opt.aftLeft ? x + w * 0.3 : x + w * 0.08;
   for (let i = 0; i < n; i++) {
-    slide.addShape('rect', Object.assign({ x: x + w * 0.08 + i * hw + hw * 0.1, y: y + h * 0.46, w: hw * 0.8, h: h * 0.12 }, f));
+    slide.addShape('rect', Object.assign({ x: h0 + i * hw + hw * 0.1, y: y + h * 0.46, w: hw * 0.8, h: h * 0.12 }, f));
   }
 }
 

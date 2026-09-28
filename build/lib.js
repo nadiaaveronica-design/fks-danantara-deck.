@@ -46,7 +46,7 @@ function header(slide, section, headline, opt = {}) {
   text(slide, headline, M, 0.68, 10.7, 0.95, {
     fontSize: opt.size || 22, bold: true, color: C.navy, valign: 'top', lineSpacingMultiple: 1.0,
   });
-  slide.addImage({ path: path.join(ASSETS, 'logo_lockup_raw.png'), x: W - M - 1.42, y: 0.38, w: 1.42, h: 0.477 });
+  slide.addImage({ path: path.join(ASSETS, 'logo_fks_raw.png'), x: W - M - 0.66, y: 0.36, w: 0.66, h: 0.548 });
 }
 
 function footer(slide, n, source) {
