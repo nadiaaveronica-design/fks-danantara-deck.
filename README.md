@@ -1,4 +1,24 @@
-# FKS Group x Danantara Indonesia — strategic investment deck
+# FKS Group x Danantara Indonesia — strategic partnership deck
+
+## Current deliverable: v7 (FKS template, v6 visual identity)
+
+| File | What it is |
+|---|---|
+| `FKS_Danantara_Strategic_Partnership_v7.pptx` | The deck: 10 slides on the FKS Food & Agri template (the same master, layouts, palette and Calibri typography as v6), fully editable, with five-section speaker notes on every slide. |
+| `inputs/FKS_Danantara_Strategic_Partnership_v6.pdf` | The v6 master design reference as received (untouched). |
+| `inputs/FKS_Food_and_Agri_ppt_template_ICON_16_9.pptx` | The FKS template as received (untouched); a backup also sits in `build/v7/template_BACKUP.pptx`. |
+| `build/v7/render/v7_raw-01.png` … `-10.png` | QA renders of v7; `inputs/v6_render/` holds the v6 pages for side-by-side comparison. |
+
+Rebuild: `cd build/v7 && python3 build_v7.py v7_raw.pptx` (python-pptx on the template; content and notes in `content_v7.py`, design helpers in `lib_v7.py`).
+
+Design lock honoured: no new palette (only the v6 colours #4D4D4F, #747678, #E6B222, #F1F1F2, #FDF8E7, #FBF0CC and greys), no navy, template background, typography and logo unchanged.
+
+Consistent 60 kt cargo case throughout: 5 kt/day vs 20 kt/day; 12 vs 3 days; 9 days x US$16.2k = ~US$146k; 12 x US$16.2k = ~US$194k; 60 kt x US$300/t = US$18m; 0.2 pp = ~US$36k (illustrative).
+
+---
+
+## Earlier deliverable (superseded): v1 standalone build
+
 
 Editable PowerPoint deck (16:9, 9 slides, full speaker notes) presenting FKS Group's food & feed
 port-logistics platform to Danantara Indonesia.
