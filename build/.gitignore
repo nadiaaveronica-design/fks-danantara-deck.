@@ -1,0 +1,10 @@
+node_modules/
+package-lock.json
+smoke*
+deck_raw.pptx
+assets/ne_50m.geojson
+assets/region.geojson
+assets/attached_*.png
+assets/contact_sheet.png
+assets/logo_*_x4.png
+render/*.pdf
