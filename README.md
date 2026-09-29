@@ -1,3 +1,20 @@
+# FSL Financial Model — revised from v29 (current deliverable)
+
+| File | What it is |
+|---|---|
+| `outputs/FSL_Financial_Model_Revised.xlsx` | The revised FSL model (54 sheets, ~35,000 live formulas): Global Inputs, one Input / Calc / Output triplet per project (14 projects incl. the Badas FS working paper), Project Summary, FSL Financials (Without / With BUMN), Funding Requirement, Financing, Valuation (Without / With BUMN), Checks, Reconciliation v29, Navigation, Model Flow. |
+| `outputs/FSL_Model_Guidance.docx` / `.md` | Separate guidance document: architecture, where to find things, both BUMN cases, valuation timing, injection-linked loan repayment, capex percentages, Badas working paper, funding-only projects, tests, open assumptions. |
+| `model/build_model.py` | Reproducible build: `python3 model/build_model.py` builds and recalculates the workbook (LibreOffice Calc headless). |
+| `model/fsl/` | Build framework (engine, project builder, company layer, valuation, summary, checks, docs) and `model/fsl/specs/` (one spec per project, docstring = effective v29 logic with cell references). |
+| `model/verify/verify_block.py` | Per-block reconciliation harness against v29 `Output_Standalone (IDR)`; `model/verify/agent_block_notes.md` = extraction notes and v29 source issues per block. |
+| `model/tests/run_tests.py` / `model/tests/test_results.md` | Scenario tests (injection date, zero / insufficient proceeds, capex %, Badas, inclusion switches, placeholders, reconciliations, v29 reproduction mode) and their evidence. |
+| `model/source/` | Original source files, unchanged (v29 workbook, earlier v8 workbook, use-of-proceeds screenshot). `model/inspect_dump.py` regenerates the TSV dumps used for inspection. |
+| `model/SPEC_GUIDE.md`, `model/BLOCK_BRIEFS.md` | How project specs are written and the per-block extraction briefs. |
+
+Calculation engine used for recalculation and testing: LibreOffice Calc 24.2 (headless). Microsoft Excel was not used.
+
+---
+
 # FKS Group x Danantara Indonesia — strategic partnership deck
 
 ## Current deliverable: v7 (FKS template, v6 visual identity)
