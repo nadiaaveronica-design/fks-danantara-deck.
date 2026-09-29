@@ -1,0 +1,24 @@
+THREE-LENS REVIEW OF v8 (rendered slides, 29 Sep 2026) AND WHAT WAS APPLIED
+
+Reviewers: (A) FKS senior management, (B) investment-banking managing director, (C) Danantara investment-committee member.
+All three confirmed the deck reads as the same FKS design as v6/v7 (grey/gold, Calibri, template header, chevrons, footnotes, page numbers; no navy) and that v8 is clearly lighter than v7.
+
+APPLIED
+- Cover: subtitle placeholder had zero width in v7 and v8 (build bug), so the date and "Strictly private and confidential" never rendered. Fixed. (B1, C8)
+- Internal notes removed from slide faces: "kept separate in the notes" (S2), "replace with high-resolution originals", "to be validated" (S6), "classification to be confirmed" (S3). Footnotes now carry sources only. (A2, A8, B2, C4)
+- S2: rows reordered number-first (11.7 Mt Wheat -> Flour mills) with arrows into the processor column; "Soybean meal and other feed"; share labels say "is on Java"; "imported in 2024"; "others ~10-15%". (A7, B10a, C)
+- S3: title "At 6 of the 9 food & feed gateways, the ship still waits for the trucks"; hero sub keeps "in our screen"; KPI sub-lines on one baseline; chevrons/arrows removed between KPIs. Bottom statement kept per the brief ("end with the problem"). (A4, B10b)
+- S4: "MARINE CLOCK · ~20 kt/day" so the FKS rate is on a face; "enclosed and weighed" instead of "hold to mill". (B5c, B7)
+- S5: values carry units ("2 port calls", "0.2-0.3% loss"); FASTER sub-line "indicative vessel-time value, ~9 days saved"; footnote states time-charter value, not demurrage; MORE SECURE icon is ship -> conveyor -> warehouse; talk track no longer says a total the audience cannot see. (A1 partly, B3, B4, B5, C5)
+- S6: "~9 Mtpa of capacity ... equivalent to ~40%"; "with Krakatau"; "Source: FKS operating data." (B6, C6)
+- S7: stage 4 renamed "Berth to mill - Jetty 2 conveyor, bagging, mill conveyor (2026)"; subtitle "now being linked from berth to mill"; duplicate NEXT label removed. (B7, A7)
+- S8: title "Next: two new gateways and two site expansions" (matches S7); labels "TODAY" / "WITH FKS" instead of "PROBLEM" / "FKS SOLUTION" (tone towards Pelindo); talk track says Dumai sits outside the import screen. (A6, B10c)
+- S9: title "Danantara can invest at the FSL platform level"; column labels separated; FSL box aligned with the boxes above; "Teluk Lamong (JV)"; qualification moved bottom-right. (A3, B8, B9a)
+
+NOT APPLIED, AND WHY
+- "US$XX" on S5 (A1, B3, C5): the brief says to use "US$XX - to be confirmed from FKS voyage data" when no defensible number exists, and no attached FKS material carries a freight saving. Kept as instructed; the alternative wording "Lower freight - to be quantified" is a one-word edit if preferred.
+- Financials, ask size, asset/contract table, next-steps slide (C1-C3, C8, B9b): outside the brief for this first-meeting deck; the talk track and notes carry next steps and the Pelindo fit.
+- "WHY THE FIT" line on S9 (A3): the brief explicitly keeps it off the face; it is in the S9 talk track.
+- Same photographs on S6 and S7 (A5, B10d, C7): the only three site photographs available are the v6 images; different crops are used. Replace with site-specific originals from FKS corporate communications.
+- "capital injection and / or share acquisition" (B8, C9): wording locked by FKS.
+- Date "October 2026": confirm against the meeting date.

@@ -56,7 +56,7 @@ s = prs.slides.add_slide(L_COVER)
 s.placeholders[0].text_frame.text = C.COVER['title']
 for r in s.placeholders[0].text_frame.paragraphs[0].runs:
     r.font.size = Pt(24); r.font.bold = True; r.font.color.rgb = rgb(DARK); r.font.name = FONT
-s.placeholders[1].height = I(0.9)
+s.placeholders[1].height = I(0.9); s.placeholders[1].width = I(7.5); s.placeholders[1].left = s.placeholders[0].left; s.placeholders[1].top = I(4.62)
 tf = s.placeholders[1].text_frame
 tf.text = C.COVER['sub1']
 for r in tf.paragraphs[0].runs:
@@ -70,15 +70,15 @@ s = content_slide(d['title'], d['subtitle'], 2)
 lab(s, d['col_labels'][0], ML, 1.1, 2.9)
 lab(s, d['col_labels'][1], 3.85, 1.1, 1.7)
 lab(s, d['col_labels'][2], 5.6, 1.1, 3.84)
-text(s, d['total'], ML, 1.3, 2.4, 0.8, size=50, bold=True, color=DARK, anchor='middle')
-text(s, d['total_sub'], 2.92, 1.42, 2.6, 0.6, size=16, color=MID)
+text(s, d['total'], ML, 1.28, 2.6, 0.64, size=44, bold=True, color=DARK, anchor='middle')
+text(s, d['total_sub'], ML, 1.94, 3.1, 0.55, size=16, color=MID)
 for i, r in enumerate(d['rows']):
-    ry = 2.34 + i * 0.74
-    picture(s, A(r['icon']), ML, ry, 0.62, 0.62, name='Icon ' + r['name'])
-    text(s, r['name'], 1.3, ry - 0.03, 2.4, 0.3, size=BODY, bold=True, color=DARK)
-    text(s, r['mt'], 1.3, ry + 0.27, 2.4, 0.38, size=22, bold=True, color=GOLD)
-    chevron(s, 3.72, ry + 0.2, 0.15, 0.22)
-    text(s, r['to'], 3.95, ry, 1.7, 0.62, size=BODY, color=DARK, anchor='middle')
+    ry = 2.56 + i * 0.68
+    picture(s, A(r['icon']), ML, ry + 0.02, 0.58, 0.58, name='Icon ' + r['name'])
+    text(s, r['mt'], 1.26, ry, 1.0, 0.62, size=20, bold=True, color=GOLD, anchor='middle')
+    text(s, r['name'], 2.26, ry, 1.66, 0.62, size=BODY, bold=True, color=DARK, anchor='middle')
+    line(s, 3.95, ry + 0.31, 4.15, ry + 0.31, GREY2, 1.0, arrow=True)
+    text(s, r['to'], 4.22, ry, 1.4, 0.62, size=BODY, color=DARK, anchor='middle')
 mx, my, mw = 5.6, 1.34, 3.84
 pj, mh = draw_map(s, mx, my, mw, ID_BBOX)
 highlight_island(s, (101.5, -1.0), mx, my, mw, ID_BBOX, GREY, name='Map - Sumatra')
@@ -90,7 +90,7 @@ for j, (num, lbl) in enumerate([d['share1'], d['share2']]):
     xx = mx + j * 2.0
     text(s, num, xx, 3.0, 1.85, 0.52, size=34, bold=True, color=GOLD, anchor='middle')
     text(s, lbl, xx, 3.54, 1.85, 0.55, size=16, color=DARK)
-text(s, d['others'], mx, 4.2, 3.84, 0.26, size=16, color=MID)
+text(s, d['others'], 6.0, 4.2, 3.44, 0.26, size=16, color=MID, align='right')
 takeaway(s, d['takeaway'], 4.6)
 footnote(s, d['footnote'])
 notes(s, d['notes'])
@@ -135,14 +135,13 @@ ky = 3.14
 for i, (num, lbl) in enumerate(d['kpis']):
     kx = FX + i * 1.93
     if i < 2:
-        text(s, num, kx, ky, 1.73, 0.48, size=26, bold=True, color=DARK, anchor='middle')
-        text(s, lbl, kx, ky + 0.5, 1.73, 0.5, size=16, color=MID)
-        chevron(s, kx + 1.76, ky + 0.14, 0.12, 0.2)
+        text(s, num, kx, ky, 1.82, 0.48, size=26, bold=True, color=DARK, anchor='middle')
+        text(s, lbl, kx, ky + 0.5, 1.82, 0.3, size=16, color=MID)
     else:
-        text(s, num, kx, ky, 1.76, 0.48, size=24, bold=True, color=GOLD, anchor='middle')
-        text(s, lbl, kx, ky + 0.5, 1.76, 0.5, size=16, color=MID)
+        text(s, num, kx, ky, 1.82, 0.48, size=24, bold=True, color=GOLD, anchor='middle')
+        text(s, lbl, kx, ky + 0.5, 1.82, 0.3, size=16, color=MID)
 takeaway(s, d['statement'], 4.32, x=FX)
-footnote(s, d['footnote'], y=4.98, w=7.9)
+footnote(s, d['footnote'], y=4.98, w=8.1)
 notes(s, d['notes'])
 
 # ==================================================================== 4 THE FKS MODEL
@@ -165,8 +164,8 @@ for cap, cx, cw in [(d['captions'][0], 1.95, 1.15), (d['captions'][1], 3.0, 1.35
     text(s, cap, cx, gy + 0.03, cw, 0.22, size=LAB, bold=True, color=DARK, align='center', spacing=1.5)
 by = 3.8
 bracket(s, 0.75, 4.3, by); bracket(s, 6.85, 9.3, by)
-text(s, d['marine'], 0.75, by + 0.04, 3.55, 0.2, size=LAB, bold=True, color=DARK, align='center', spacing=1.5)
-text(s, d['inland'], 6.85, by + 0.04, 2.45, 0.2, size=LAB, bold=True, color=DARK, align='center', spacing=1.5)
+text(s, d['marine'], 0.75, by + 0.04, 3.55, 0.2, size=LAB, bold=True, color=DARK, align='center', spacing=1.0)
+text(s, d['inland'], 6.85, by + 0.04, 2.45, 0.2, size=LAB, bold=True, color=DARK, align='center', spacing=1.0)
 rrect(s, 4.4, 3.7, 2.3, 0.3, fill=YELLOW, radius=0.15, name='Buffer chip')
 text(s, d['buffer'], 4.4, 3.7, 2.3, 0.3, size=16, bold=True, color=DARK, align='center', anchor='middle', spacing=1.0)
 for i, (k, v) in enumerate(d['outcomes']):
@@ -193,8 +192,9 @@ for i, p in enumerate(d['panels']):
         text(s, 'vs', cx + 1.36, 1.92, 0.3, 0.3, size=LAB, color=MID, align='center')
         ship(s, cx + 1.02, 1.58, 1.3, 0.68, DARK, hatches=4, hatch_color=YELLOW2) if False else ship(s, cx + 1.62, 1.66, 0.72, 0.6, DARK, hatches=3, hatch_color=YELLOW2)
     else:
-        conveyor(s, cx + 0.15, 1.82, 0.95, YELLOW, thickness=0.06, legs=2, leg_h=0.44)
-        warehouse(s, cx + 1.15, 1.58, 1.0, 0.68, YELLOW)
+        ship(s, cx + 0.05, 1.86, 0.62, 0.4, DARK, hatches=2, hatch_color=YELLOW2)
+        conveyor(s, cx + 0.62, 1.8, 0.62, YELLOW, thickness=0.06, legs=2, leg_h=0.46)
+        warehouse(s, cx + 1.28, 1.58, 0.95, 0.68, YELLOW)
     for (rl, ry), (val, _) in zip(rows, [p['conv'], p['fks']]):
         text(s, val, cx, ry, PW, 0.46, size=24, bold=True, color=DARK if rl == 'CONVENTIONAL' else GOLD, anchor='middle')
     hc = GOLD if p['hero_color'] == 'gold' else GREY
@@ -207,7 +207,7 @@ for yy in (2.32, 2.84, 3.4):
     line(s, ML, yy, MR, yy, LINE, 0.75)
 for xx in (2.12, 4.55, 6.98):
     line(s, xx, 1.12, xx, 4.62, LINE, 0.75)
-footnote(s, d['footnote'], y=4.76, w=8.3, h=0.4)
+footnote(s, d['footnote'], y=4.74, w=8.3, h=0.4)
 notes(s, d['notes'])
 
 # ==================================================================== 6 THREE GATEWAYS
@@ -217,11 +217,11 @@ PW6 = 2.86
 for i, site in enumerate(d['sites']):
     x = ML + i * (PW6 + 0.15)
     picture(s, A(site['photo']), x, 1.12, PW6, 1.85, name='Photo ' + site['name'])
-    text(s, site['name'], x, 3.04, 1.9, 0.3, size=BODY, bold=True, color=DARK)
-    text(s, site['mtpa'], x + 1.5, 3.0, PW6 - 1.5, 0.36, size=22, bold=True, color=GOLD, align='right')
+    text(s, site['name'], x, 3.04, 1.78, 0.3, size=BODY, bold=True, color=DARK)
+    text(s, site['mtpa'], x + 1.75, 3.02, PW6 - 1.75, 0.34, size=20, bold=True, color=GOLD, align='right')
     text(s, site['fact'], x, 3.42, PW6, 0.6, size=16, color=MID)
-text(s, d['big'], ML, 4.18, 2.0, 0.7, size=44, bold=True, color=DARK, anchor='middle')
-text(s, d['big_sub'], 2.62, 4.2, 6.6, 0.64, size=BODY, color=DARK, anchor='middle')
+text(s, d['big'], ML, 4.18, 2.5, 0.7, size=44, bold=True, color=DARK, anchor='middle')
+text(s, d['big_sub'], 3.12, 4.2, 6.2, 0.64, size=BODY, color=DARK, anchor='middle')
 footnote(s, d['footnote'], y=4.98, w=8.0)
 notes(s, d['notes'])
 
@@ -246,7 +246,6 @@ for i, st in enumerate(d['stages']):
         for c in C.S8['cards']:
             sx, sy = pj(c['lon'], c['lat']); sy += 0.09 if c['name'] == 'CIWANDAN' else 0
             oval(s, sx - 0.06, sy - 0.06, 0.12, 0.12, fill=WHITE, line=YELLOW, lw=1.25)
-        lab(s, 'Next', x + 0.12, phY + 0.1, 0.8, color=GOLD)
     last = i == n - 1
     if last:
         oval(s, x, ty - 0.08, 0.16, 0.16, fill=WHITE, line=YELLOW, lw=1.5)
@@ -291,8 +290,8 @@ notes(s, d['notes'])
 d = C.S9
 s = content_slide(d['title'], d['subtitle'], 9)
 lab(s, d['today'], ML, 1.1, 2.6)
-lab(s, d['invests'], 3.5, 1.1, 2.0, color=GOLD, align='center', spacing=1.0)
-lab(s, d['after'], 5.6, 1.1, 3.0)
+lab(s, d['invests'], 3.4, 1.1, 2.1, color=GOLD, align='center', spacing=1.0)
+lab(s, d['after'], 5.78, 1.1, 2.8)
 # today
 box(s, ML, 1.42, 2.6, 0.62, d['parent'])
 line(s, 1.86, 2.04, 1.86, 2.76, DARK, 1.0, arrow=True)
@@ -301,7 +300,7 @@ box(s, ML, 2.78, 2.6, 0.8, d['fsl'], fill=YELLOW, lc=YELLOW, s1=22)
 text(s, d['fsl_sub'], ML, 3.22, 2.6, 0.28, size=LAB, color=DARK, align='center')
 # investment
 chevron(s, 4.15, 1.9, 0.7, 0.95)
-text(s, d['invest_text'], 3.3, 2.95, 2.4, 0.6, size=16, color=MID, align='center')
+text(s, d['invest_text'], 3.22, 2.95, 2.32, 0.6, size=16, color=MID, align='center')
 # after
 box(s, 5.6, 1.42, 1.72, 0.62, d['parent'])
 box(s, 7.5, 1.42, 1.94, 0.62, d['danantara'], lc=YELLOW, lw=1.5)
@@ -312,8 +311,8 @@ xm = (xa + xb) / 2
 line(s, xm, bus, xm, 2.76, DARK, 1.0, arrow=True)
 text(s, d['pct_fks'], xa - 0.95, 2.06, 0.88, 0.4, size=26, bold=True, color=DARK, align='right', anchor='middle')
 text(s, d['pct_dan'], xb + 0.07, 2.06, 0.9, 0.4, size=26, bold=True, color=GOLD, anchor='middle')
-box(s, 5.9, 2.78, 3.34, 0.8, d['fsl'], fill=YELLOW, lc=YELLOW, s1=22)
-text(s, d['fsl_sub'], 5.9, 3.22, 3.34, 0.28, size=LAB, color=DARK, align='center')
+box(s, 5.6, 2.78, 3.84, 0.8, d['fsl'], fill=YELLOW, lc=YELLOW, s1=22)
+text(s, d['fsl_sub'], 5.6, 3.22, 3.84, 0.28, size=LAB, color=DARK, align='center')
 line(s, xm, 3.58, xm, 3.76, DARK, 1.0, arrow=True)
 rect(s, 5.0, 3.78, MR - 5.0, 1.14, fill=PANEL, name='Platform panel')
 lab(s, d['operating_label'], 5.15, 3.86, 2.3, color=GOLD, spacing=1.0)
@@ -322,7 +321,7 @@ for j, nm in enumerate(d['operating']):
 lab(s, d['pipeline_label'], 7.7, 3.86, 1.7, color=GOLD)
 for j, nm in enumerate(d['pipeline']):
     text(s, nm, 7.7, 4.1 + j * 0.26, 1.7, 0.26, size=16, color=DARK)
-text(s, d['illus'], ML, 4.98, 4.4, 0.2, size=12, bold=True, color=GOLD, spacing=1.0)
+text(s, d['illus'], 5.0, 4.98, 4.44, 0.2, size=12, bold=True, color=GOLD, spacing=1.0, align='right')
 notes(s, d['notes'])
 
 # ==================================================================== 10 DISCLAIMER
