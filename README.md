@@ -1,6 +1,27 @@
 # FKS Group x Danantara Indonesia — strategic partnership deck
 
-## Current deliverable: v7 (FKS template, v6 visual identity)
+## Current deliverable: v8 (simplified for the meeting; FKS template, v6/v7 visual identity)
+
+| File | What it is |
+|---|---|
+| `FKS_Danantara_Strategic_Partnership_v8.pptx` | The deck: 10 slides on the FKS Food & Agri template (same master, layouts, palette and Calibri typography as v6/v7), fully editable, five-section speaker notes on every slide. One message per slide; body text 16–18 pt, section labels 14 pt, footnotes 10.5 pt. |
+| `build/v8/FKS_Danantara_Strategic_Partnership_v7_BACKUP.pptx` | v7 as received, untouched (starting point for v8). |
+| `FKS_Danantara_Strategic_Partnership_v7.pptx` | The previous version (unchanged). |
+| `inputs/FKS_Danantara_Strategic_Partnership_v6.pdf`, `inputs/FKS_Danantara_Strategic_Partnership_v7.pdf` | The design references as received. |
+| `build/v8/render/v8_raw-01.png` … `-10.png` | QA renders of v8; `build/v7/render/` holds v7 for side-by-side comparison. |
+| `build/v8/review_v8.txt` | Three-lens review findings (FKS management, IB MD, Danantara IC) and what was applied. |
+
+Rebuild: `cd build/v8 && python3 build_v8.py v8_raw.pptx` (python-pptx on the template; face text and notes in `content_v8.py`, which inherits the v7 sources / calculation / to-validate notes; v8 helpers in `lib_v8.py` on top of `../v7/lib_v7.py`).
+
+What changed from v7: slide 2 rebuilt as imports → processors → map with Java highlighted; slide 3 built around "6 of 9" and the vessel–grab–hopper–truck–mill flow (no 102/20/9/6 funnel); slide 4 one large schematic with the transit warehouse as the buffer and the three outcomes; slide 5 a three-panel conventional / FKS / value matrix per 60 kt cargo (no total, freight saving left as US$XX because no FKS source supports a figure); slide 6 large photographs; slide 7 larger photos and one milestone per step; slide 8 two cards with problem / FKS solution only; slide 9 a clean 100% → 51/49 structure with the platform underneath. Everything removed from the slide faces is in the notes.
+
+Design lock honoured: no new palette (only #4D4D4F, #747678, #E6B222, #F1F1F2, #FDF8E7, #FBF0CC and greys), no navy, template background, typography and logo unchanged.
+
+Consistent 60 kt cargo case throughout: 5 kt/day vs 20 kt/day; 12 vs 3 days; 9 days x US$16.2k = ~US$146k; 60 kt x US$300/t = US$18m; 0.2 pp = ~US$36k (illustrative).
+
+---
+
+## Earlier deliverable: v7 (FKS template, v6 visual identity)
 
 | File | What it is |
 |---|---|
